@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+body {
+	font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+	margin: 0;
+	background: #ffeef6;
+	color: #444;
+}
+
+/* ヘッダー */
+.header {
+	background: #ffb7d5;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* メインエリア */
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+	gap: 20px;
+}
+
+/* テキスト部分 */
+.about {
+	background: #ffffffaa;
+	padding: 20px;
+	border-radius: 15px;
+	flex: 2;
+	box-shadow: 0 0 10px #ffccddee;
+}
+
+/* 写真2枚エリア */
+.imgbox2 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.imgbox2 img {
+	width: 200px;   /* ← 必ず固定サイズにする */
+	height: 200px;  /* ← 幅と高さを同じにする（ここが重要！） */
+	object-fit: cover;
+	border-radius: 50%;
+	border: 4px solid #ffd4e8;
+	box-shadow: 0 5px 20px #ffb6c1aa;
+	transition: transform 0.8s ease, box-shadow 0.3s ease;
+	display: block;
+	margin: 0 auto;
+}
+
+/* くるっと回転 */
+.imgbox2 img:hover {
+	transform: rotate(360deg) scale(1.08);
+	box-shadow: 0 8px 25px #ff8db5aa;
+
+/* サイドバー */
+.sidebar {
+	background: #ffd9ec;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px #ffccddee;
+}
+
+.sidebar h2 {
+	text-align: center;
+	color: #d84f9c;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sidebar li {
+	padding: 10px;
+	background: #fff0f7;
+	margin: 10px 0;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #d84f9c;
+}
+
+/* フッター */
+.footer {
+	text-align: center;
+	padding: 15px;
+	background: #ffb7d5;
+	color: #fff;
+	margin-top: 20px;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 600px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.imgbox2 {
+		flex-direction: column;
+	}
+
+	.sidebar {
+		margin: 0 20px;
+	}
+}
